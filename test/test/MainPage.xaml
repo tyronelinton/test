@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:test"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="test.MainPage" NavigationPage.HasNavigationBar="False">
+    <RelativeLayout Padding="0">
+        
+        
+    <!--<StackLayout Padding="0" Spacing="0" 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0}">    
+    <StackLayout Padding="0" Spacing="0" BackgroundColor="LightGray" HeightRequest="38">
+            
+            <StackLayout Spacing="10" Padding="10,5,10,5" Orientation="Horizontal">
+                <Button x:Name="myButton" Image="back.png" HeightRequest="26" WidthRequest="26" BackgroundColor="Transparent" HorizontalOptions="Start" Opacity="0.5" VerticalOptions="CenterAndExpand"
+                        Clicked="MyButton_Clicked"/>
+            </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0" Padding="0,0,0,0" Opacity="0.5" >
+                    <BoxView Color="Silver" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+                    <BoxView Color="Silver" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+    </StackLayout>
+       
+        <StackLayout Padding="20,40,50,10" Spacing="50">
+            <StackLayout Padding="0" Spacing="0">
+                    <StackLayout Orientation="Horizontal" Padding="20,0,0,0" Spacing="5">
+                        <Label Text="SAMPLE ID" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" x:Name="idEntry" WidthRequest="100"  HorizontalOptions="Center"/>
+                        <Image Source="sample.png" HeightRequest="26" WidthRequest="26" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+                    </StackLayout>
+                    <local:MyEntry Text="{Binding CurrentSample.Id}" CurvedBackgroundColor="LightGreen" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large"  HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
+                />
+            </StackLayout>
+            <StackLayout Padding="0" Spacing="0">
+                    <StackLayout Orientation="Horizontal" Padding="20,0,0,0" Spacing="5">
+                        <Label Text="BATCH ID" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" x:Name="batchIdEntry" WidthRequest="100"/>
+                        <Image Source="worksheet.png" HeightRequest="26" WidthRequest="26" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+
+                    </StackLayout>
+
+                    <local:MyEntry Text="{Binding CurrentSample.BatchId}" CurvedBackgroundColor="LightGreen" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
+                       
+     />
+            </StackLayout>
+                <StackLayout Spacing="0" Padding="20,0,0,0">
+                    <StackLayout Orientation="Horizontal" Spacing="5" >
+                        <Label Text="LOCATION" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" x:Name="locationEntry" WidthRequest="100"/>
+                        <Image Source="location.png" HeightRequest="26" WidthRequest="26" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+                    </StackLayout>
+
+
+                    <local:MyEntry Text="{Binding CurrentSample.Location}" CurvedBackgroundColor="LightGreen" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+                       />
+            </StackLayout>
+                <StackLayout Padding="20,0,0,0" Spacing="0">
+                    <StackLayout Orientation="Horizontal" Spacing="5">
+                        <Label Text="DATE" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" WidthRequest="100" />
+                        <Image Source="calender.png" HeightRequest="26" WidthRequest="26" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+                    </StackLayout>
+
+                    <TimePicker BackgroundColor="LightGreen" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" 
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" x:Name="timePicker" 
+       />
+            </StackLayout>
+
+                <StackLayout Padding="20,0,0,0" Spacing="0">
+                    <StackLayout Orientation="Horizontal" Spacing="5">
+                        <Label Text="NOTES" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" WidthRequest="100" />
+                        <Image Source="pencil.png" HeightRequest="26" WidthRequest="26" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+                    </StackLayout>
+
+                    <local:MyEntry Text="{Binding CurrentSample.Notes}" CurvedBackgroundColor="LightGreen" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+       />
+                </StackLayout>
+
+                <StackLayout Padding="20,0,0,0" Spacing="0">
+                    <StackLayout Orientation="Horizontal" Spacing="5">
+                        <Label Text="STC" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" WidthRequest="100" />
+                        <Image Source="alpha.png" HeightRequest="26" WidthRequest="26" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Padding="20,5,20,5">
+                        <Picker Title="Alpha" SelectedItem="{Binding CurrentSample.StcAlpha}" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" x:Name="alphaPicker"/>
+                        <Picker Title="Numeric" SelectedItem="{Binding CurrentSample.StcNumeric}"  TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" x:Name="numericPicker"/>
+                    </StackLayout>
+       
+                </StackLayout>
+
+            </StackLayout>
+        
+        
+        <StackLayout Padding="20,20,20,20" Spacing="25">
+                <StackLayout Orientation="Horizontal" Spacing="5" Padding="20,0,0,0">
+                    <Label Text="HAS BACTERIA" FontAttributes="Bold" TextColor="Gray" FontSize="Medium" x:Name="hasBacteriaEntry" WidthRequest="100"/>
+                    <Image Source="shield.png" HeightRequest="26" WidthRequest="26" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Opacity="0.5"/>
+                 <local:MySwitch IsToggled="{Binding CurrentSample.HasBacteria}"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Scale="3"/>
+                </StackLayout>
+               
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="0" Padding="100,10,100,5" Opacity="0.5" >
+            <BoxView Color="Silver" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+            <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+            <BoxView Color="Silver" HeightRequest="2" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        --><!--<lottie:AnimationView AutoPlay="True" Animation="alertminianimation.json" Loop="False" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                              IsEnabled="{Binding Source={x:Reference mySwitch}, Path=IsToggled}"
+                              IsVisible="{Binding Source={x:Reference mySwitch}, Path=IsToggled}"
+                              IsPlaying="{Binding Source={x:Reference mySwitch}, Path=IsToggled}"/>--><!--
+       
+  
+    </StackLayout>
+      <lottie:AnimationView 
+            x:Name="animationView" 
+            Animation="redalert.json" 
+          IsVisible="False"
+          AutoPlay="True"
+          IsEnabled="True"
+          IsPlaying="True"
+          FlowDirection="RightToLeft"
+          Loop="True"
+                HeightRequest="500"
+                WidthRequest="500"
+             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0}"/>-->
+    
+    </RelativeLayout>
+</ContentPage>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:test"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="test.AppLandingPage" NavigationPage.HasNavigationBar="False">
+    <RelativeLayout Padding="0">
+
+
+        <StackLayout Padding="0" Spacing="0" 
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0}">
+            <StackLayout Padding="0" Spacing="0" BackgroundColor="LightGray" HeightRequest="48">
+
+                <StackLayout Spacing="0" Padding="5,0,5,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Button x:Name="myButton" Image="back.png" HeightRequest="26" WidthRequest="26" BackgroundColor="Transparent" HorizontalOptions="Start" Opacity="0.8" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Padding="10,20,10,0" Spacing="20">
+                <StackLayout Padding="0" Spacing="0">
+                    <StackLayout Orientation="Horizontal" Padding="0,0,0,0" Spacing="5">
+                        <Label Text="LABORATARY ID" FontAttributes="Bold" TextColor="Silver" FontSize="Medium" x:Name="labId"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="End" VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <local:MyEntry Text="01Test" CurvedBackgroundColor="LightGreen" TextColor="DarkBlue" x:Name="labIdEntry" FontAttributes="Bold" FontSize="Large"  HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
+                />
+                </StackLayout>
+                <StackLayout Padding="0" Spacing="0">
+                    <StackLayout Orientation="Horizontal" Padding="10,0,10,0" Spacing="5">
+                        <Label Text="CHOOSE METHOD" FontAttributes="Bold" TextColor="Silver" FontSize="Medium" x:Name="batchIdEntry" WidthRequest="150" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="0" Padding="20,0,20,0" HorizontalOptions="FillAndExpand">
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+
+                </StackLayout>
+                
+                    
+                    <StackLayout Orientation="Horizontal" Padding="15,0,0,0" Spacing="10" >
+
+                        <Label Text="OLDEST SAMPLE" FontAttributes="Bold" TextColor="DarkBlue" FontSize="Medium" x:Name="locationEntry" WidthRequest="150" VerticalOptions="CenterAndExpand" />
+                    <local:MyEntry Text="20532" CurvedBackgroundColor="LightGreen" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="End" x:Name="oldestSampleIdEntry"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+                        <DatePicker  TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" x:Name="oldestSampleYrDatePicker"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+                    </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="0" Padding="20,0,20,0"  HorizontalOptions="FillAndExpand">
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+
+                <StackLayout Spacing="50" Padding="20,0,20,0" Orientation="Horizontal">
+                    <Label Text="ALL OUTSTANDING" FontAttributes="Bold" TextColor="DarkBlue" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                    <local:MySwitch Scale="2" x:Name="allOutstandingSwitch"
+                       VerticalOptions="CenterAndExpand"  HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="0" Padding="20,0,20,0" HorizontalOptions="FillAndExpand">
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+
+                <StackLayout Spacing="50" Padding="20,0,20,0" Orientation="Horizontal">
+                    <Label Text="ALL SINCE DATE" FontAttributes="Bold" TextColor="DarkBlue" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                    <DatePicker  TextColor="DarkBlue" FontAttributes="Bold" FontSize="Large" x:Name="sinceDatePicker"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="End"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="0" Padding="20,0,20,0" HorizontalOptions="FillAndExpand">
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                    <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+
+
+            </StackLayout>
+
+
+            <StackLayout Padding="0,20,0,0" Spacing="30">
+                <StackLayout Spacing="0" Padding="80,0,100,0">
+                    <Label Text="CHOOSE PROFILE" FontAttributes="Bold" TextColor="Silver"  FontSize="Medium" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                    <Picker SelectedItem="Bacti (Petri Dishes - Incubator)" FontSize="Medium" FontAttributes="Bold" TextColor="DarkBlue" x:Name="profilePicker" HorizontalOptions="FillAndExpand"
+                             VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout Padding="15,25,20,0" Spacing="30">
+                    
+                    <StackLayout Spacing="0" Padding="0">
+                    <Button Text="SCAN" CornerRadius="30" FontAttributes="Bold" TextColor="DarkBlue" BackgroundColor="LightGreen" FontSize="Large" 
+                        VerticalOptions="EndAndExpand" x:Name="scanButton" Clicked="ScanButton_Clicked" HeightRequest="100" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="0" Padding="20,0,20,0" HorizontalOptions="FillAndExpand">
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <StackLayout Spacing="60" Padding="0" IsVisible="False" x:Name="hiddenLayout">
+                    <StackLayout Padding="10,0,10,0" Spacing="0" >
+                        
+                        <Label Text="WORKSHEET NOTES" FontAttributes="Bold" TextColor="Silver"  FontSize="Medium" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="{Binding UserFeedback}" TextColor="DarkBlue" BackgroundColor="Transparent" HeightRequest="80" x:Name="userFeedBackLabel" FontSize="Medium" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+                            <StackLayout Orientation="Horizontal" Spacing="0" Padding="20,0,20,0" HorizontalOptions="FillAndExpand">
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                                <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                            </StackLayout>
+                        </StackLayout>
+                    <Button  Text="GENERATE WORKSHEET" CornerRadius="30" FontAttributes="Bold" TextColor="DarkBlue" BackgroundColor="LightGreen" FontSize="Large" 
+                        VerticalOptions="EndAndExpand" HeightRequest="100" HorizontalOptions="FillAndExpand" x:Name="generatorButton" Clicked="GeneratorButton_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+        <lottie:AnimationView 
+            x:Name="animationView" 
+            Animation="radar.json" 
+          IsVisible="False"
+          AutoPlay="True"
+          IsEnabled="True"
+          IsPlaying="True"
+          FlowDirection="RightToLeft"
+          Loop="True"
+                HeightRequest="200"
+                WidthRequest="200"
+             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0}"/>
+    </RelativeLayout>
+</ContentPage>

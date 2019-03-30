@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:local="clr-namespace:test"
+             x:Class="test.ListViewPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0}">
+                <StackLayout Spacing="5" Padding="0,5,0,5">
+                    <ListView ItemsSource="{Binding SampleList}" BindingContext="{Binding SampleList}" ItemSelected="ListView_ItemSelected" SeparatorColor="Silver" x:Name="sampleListView" RowHeight="130" VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <local:NewCustomCell SelectedBackgroundColor="{Binding IsEndingSoon}" x:Name="listViewViewCell">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="100" Padding="10,0,10,0" BackgroundColor="{Binding IsEndingSoon}">
+                                
+                            <StackLayout Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="5,5,5,5" x:Name="listViewStackLayout">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="40">
+                                    <Label Text="STC" FontSize="Small" FontAttributes="Bold" TextColor="Silver" VerticalOptions="EndAndExpand"/>
+                                        <Label Text="ID" FontSize="Small" FontAttributes="Bold" TextColor="Silver" VerticalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Spacing="40" >
+                                    <Label Text="{Binding STC}" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue"/>
+                                        <Label Text="{Binding Id}" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue" HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                                <Label Text="NOTES" FontSize="Small"  FontAttributes="Bold" TextColor="Silver" VerticalOptions="EndAndExpand"/>
+                                </StackLayout>
+                                            <local:CustomEntryCell Text="{Binding Notes}"  FontSize="Medium" FontAttributes="Bold" TextColor="DarkBlue" HorizontalOptions="FillAndExpand" WidthRequest="180" x:Name="resultEntryCell"/>
+                            </StackLayout>
+
+                                <StackLayout Spacing="25" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="5,5,5,5">
+                                    <Label Text="CLEAR" FontSize="Large" FontAttributes="Bold" TextColor="DarkBlue" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                            <Switch OnColor="Transparent" BackgroundColor="Transparent"  Scale="2" x:Name="bacteriaSwitch" HorizontalOptions="CenterAndExpand" Toggled="BacteriaSwitch_Toggled" BindingContext="{Binding .}"/>
+                                        </StackLayout>
+                            </StackLayout>
+                        </local:NewCustomCell>
+                    </DataTemplate></ListView.ItemTemplate>
+            </ListView>
+                    <StackLayout Orientation="Horizontal" Spacing="0" Padding="20,0,20,0"  HorizontalOptions="FillAndExpand">
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.3" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.4" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.5" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.6" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.7" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.8" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" Opacity="0.9" />
+                        <BoxView Color="LightGreen" HeightRequest="2" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                    <Button  Text="SAVE" CornerRadius="30" FontAttributes="Bold" TextColor="DarkBlue" BackgroundColor="LightGreen" FontSize="Medium" 
+                        VerticalOptions="EndAndExpand" HeightRequest="50" HorizontalOptions="FillAndExpand" x:Name="saveButton" Clicked="SaveButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="hiddenLayout" BackgroundColor="Transparent" Spacing="60"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0.7}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.15}">
+                <Label Text="CHOOSE OPTION" FontAttributes="Bold" TextColor="DarkBlue"  FontSize="Large" HorizontalTextAlignment="Center" BackgroundColor="Transparent" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                <Button  Text="Show Details" CornerRadius="30" FontAttributes="Bold" TextColor="DarkBlue" BackgroundColor="LightGreen" FontSize="Medium" 
+                        VerticalOptions="CenterAndExpand" HeightRequest="100" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked" />
+                <Button  Text="Remove" CornerRadius="30" FontAttributes="Bold" TextColor="DarkBlue" BackgroundColor="LightGreen" FontSize="Medium" 
+                        VerticalOptions="CenterAndExpand" HeightRequest="100" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked" />
+                <Button  Text="Attach existing image" CornerRadius="30" FontAttributes="Bold" TextColor="DarkBlue" BackgroundColor="LightGreen" FontSize="Medium" 
+                        VerticalOptions="CenterAndExpand" HeightRequest="100" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked" />
+                <Button  Text="Take Photo" CornerRadius="30" FontAttributes="Bold" TextColor="DarkBlue" BackgroundColor="LightGreen" FontSize="Medium" 
+                        VerticalOptions="CenterAndExpand" HeightRequest="100" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"/>
+                
+            </StackLayout>
+            <lottie:AnimationView 
+            x:Name="animationView" 
+            Animation="radar.json" 
+          IsVisible="False"
+          AutoPlay="True"
+          IsEnabled="True"
+          IsPlaying="True"
+          FlowDirection="RightToLeft"
+          Loop="True"
+                HeightRequest="200"
+                WidthRequest="200"
+             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0}"/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
